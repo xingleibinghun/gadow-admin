@@ -1,0 +1,37 @@
+.container {
+  height: 100vh;
+}
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  .logo {
+    vertical-align: middle;
+    width: 39px;
+    height: 39px;
+    background: rgba(255, 255, 255, 0.3);
+  }
+  .title {
+    color: #fff;
+    margin: 0;
+  }
+  .actions {
+    :global(.anticon) {
+      color: #fff;
+      font-size: 20px;
+      cursor: pointer;
+    }
+  }
+}
+.menus {
+  height: 100%;
+}
+.site-layout-content {
+  font-size: 15px;
+  background-color: #fff;
+}
+:global(.ant-layout-sider .ant-layout-sider-children) {
+  margin-top: 0;
+  padding-top: 0;
+}

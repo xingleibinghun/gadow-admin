@@ -9,8 +9,7 @@
     "strict": true,
     "skipLibCheck": true,
     "target": "es6",
-    "jsx": "react",
-    "paths": {}
+    "jsx": "react"
   },
   "exclude": [
     "**/node_modules",

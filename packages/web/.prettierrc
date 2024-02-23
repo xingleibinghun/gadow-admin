@@ -1,0 +1,18 @@
+{
+  "arrowParens": "avoid",
+  "singleQuote": true,
+  "semi": false,
+  "bracketSameLine": false,
+  "trailingComma": "none",
+  "overrides": [
+    {
+      "files": [
+        ".eslintrc",
+        ".prettierrc"
+      ],
+      "options": {
+        "parser": "json"
+      }
+    }
+  ]
+}
