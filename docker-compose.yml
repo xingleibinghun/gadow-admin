@@ -1,0 +1,32 @@
+version: '3.8'
+services:
+  admin-server:
+    build:
+      context: ./
+      dockerfile: ./.docker/Dockerfile
+    restart: 'always'
+    depends_on:
+      - mysql
+      - redis
+    ports:
+      - ${SERVICE_PORT}:${SERVICE_PORT}
+    networks:
+      - gadow
+  mysql:
+    image: ${IMAGE_MYSQL}
+    volumes:
+      - ${DATA_PATH}/mysql:/var/lib/mysql
+    environment:
+      - MYSQL_DATABASE=${DB_NAME}
+      - MYSQL_ROOT_PASSWORD=${DB_PASS}
+    networks:
+      - gadow
+  redis:
+    image: ${IMAGE_REDIS}
+    volumes:
+      - ${DATA_PATH}/redis:/data
+    networks:
+      - gadow
+networks:
+  gadow:
+    driver: bridge

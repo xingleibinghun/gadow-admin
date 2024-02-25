@@ -9,7 +9,7 @@ tmp
 node_modules
 
 # IDEs and editors
-/.idea
+.idea
 .project
 .classpath
 .c9/
@@ -41,3 +41,9 @@ Thumbs.db
 # test
 /packages/*/test
 /packages/*/coverage
+
+# Private
+.env
+
+# Docker
+.data
