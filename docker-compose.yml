@@ -19,12 +19,16 @@ services:
     environment:
       - MYSQL_DATABASE=${DB_NAME}
       - MYSQL_ROOT_PASSWORD=${DB_PASS}
+    expose:
+      - ${DB_PORT}
     networks:
       - gadow
   redis:
     image: ${IMAGE_REDIS}
     volumes:
       - ${DATA_PATH}/redis:/data
+    expose:
+      - ${REDIS_PORT}
     networks:
       - gadow
 networks:
