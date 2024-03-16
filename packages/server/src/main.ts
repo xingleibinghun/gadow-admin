@@ -1,7 +1,7 @@
 import { NestFactory } from '@nestjs/core'
 import { VersioningType, VERSION_NEUTRAL } from '@nestjs/common'
 import helmet from 'helmet'
-import * as cookieParser from 'cookie-parser'
+import cookieParser from 'cookie-parser'
 import { rateLimit } from 'express-rate-limit'
 import { NestExpressApplication } from '@nestjs/platform-express'
 import { ConfigService } from '@nestjs/config'
