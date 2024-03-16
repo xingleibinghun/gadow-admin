@@ -1,0 +1,3 @@
+{
+  "permissions": ["USER.CREARE", "USER.EDIT", "USER.FETCH"]
+}
